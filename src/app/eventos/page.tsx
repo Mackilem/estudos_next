@@ -1,6 +1,4 @@
 
-import { GetStaticProps, NextPage } from 'next';
-
 import EventCard from '../../components/EventCard';
 import { Evento } from '../../types/events';
 
@@ -11,7 +9,7 @@ export default async function HomePage() {
     const res = await fetch(
       'https://raw.githubusercontent.com/Goiaba-Intelligence/goiaba_server_addons/13.0/fmvela_events.json',
       //{ next: { revalidate: 60 } }
-      { cache: 'no-store' }
+      //{ cache: 'no-store' }
     );
 
     if (!res.ok) {
@@ -24,7 +22,7 @@ export default async function HomePage() {
       <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-extrabold text-gray-900 text-center mb-12">
-            Próximos Eventos
+            Próximos Eventos ({eventos.length})
           </h1>
 
           {eventos.length > 0 ? (

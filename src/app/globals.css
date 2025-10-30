@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
+/* ---------- Base do tema ---------- */
 :root {
+  /* Tema claro */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e293b; /* cinza-800 para boa legibilidade */
+
+  /* Paleta FMVela */
+  --color-primary: #014076; /* azul náutico principal */
+  --color-primary-light: #1e5ca8;
+  --color-primary-dark: #002a4e;
+
+  --color-secondary: #F97316; /* laranja vibrante */
+  --color-secondary-light: #d9a85a;
+  --color-secondary-dark: #a87931;
+
+  --color-accent: #009ee2; /* azul claro para contrastes */
+
+  /* Tipografia */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Gotham", "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* ---------- Tema escuro ---------- */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +30,22 @@
   }
 }
 
+/* ---------- Tokens de tema Tailwind 4 ---------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+/* ---------- Estilos globais ---------- */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

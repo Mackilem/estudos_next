@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Instagram, Youtube } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 interface HeaderProps {
@@ -59,7 +59,13 @@ export default function Header({ pathname }: HeaderProps) {
               aria-label="Instagram"
               className="text-gray-300 hover:text-[#F97316] transition-colors"
             >
-              <Instagram size={20} />
+              <Image
+                src="/instagram.png" 
+                alt="Instagram"
+                width={28}
+                height={28}
+                className="hover:opacity-80 transition-opacity"
+              />
             </Link>
             <Link
               href="https://www.youtube.com"
@@ -67,7 +73,13 @@ export default function Header({ pathname }: HeaderProps) {
               aria-label="YouTube"
               className="text-gray-300 hover:text-[#F97316] transition-colors"
             >
-              <Youtube size={20} />
+              <Image
+                src="/youtube.png"
+                alt="YouTube"
+                width={28}
+                height={28}
+                className="hover:opacity-80 transition-opacity"
+              />
             </Link>
           </div>
 
@@ -116,7 +128,13 @@ export default function Header({ pathname }: HeaderProps) {
                 aria-label="Instagram"
                 className="text-gray-300 hover:text-[#F97316]"
               >
-                <Instagram size={22} />
+              <Image
+                src="instagram.png" 
+                alt="Instagram"
+                width={22}
+                height={22}
+                className="hover:opacity-80 transition-opacity"
+              />
               </Link>
               <Link
                 href="https://www.youtube.com"
@@ -124,7 +142,13 @@ export default function Header({ pathname }: HeaderProps) {
                 aria-label="YouTube"
                 className="text-gray-300 hover:text-[#F97316]"
               >
-                <Youtube size={22} />
+                <Image
+                src="/youtube.png"
+                alt="YouTube"
+                width={22}
+                height={22}
+                className="hover:opacity-80 transition-opacity"
+              />
               </Link>
             </div>
 

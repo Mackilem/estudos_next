@@ -33,12 +33,44 @@ export default function Footer() {
             </div>
 
             {/* Coluna 3 - Logo */}
-            <div className="flex justify-end">
-            <img
-                src="/fmvela.png"
-                alt="Logo FMVela"
-                className="h-20 w-auto object-contain"
-            />
+            <div className="flex flex-col justify-center">
+              <img
+                  src="/fmvela.png"
+                  alt="Logo FMVela"
+                  className="h-20 w-auto object-contain"
+              />
+            
+              {/* Ícones sociais */}
+              <div className="space-x-4 ml-4 pt-6 flex justify-center">
+                <Link
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  aria-label="Instagram"
+                  className="text-gray-300 hover:text-[#F97316] transition-colors"
+                >
+                  <Image
+                    src="/instagram.png"
+                    alt="Instagram"
+                    width={32}
+                    height={32}
+                    className="hover:opacity-80 transition-opacity"
+                  />
+                </Link>
+                <Link
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  aria-label="YouTube"
+                  className="text-gray-300 hover:text-[#F97316] transition-colors"
+                >
+                  <Image
+                    src="/youtube.png"
+                    alt="YouTube"
+                    width={32}
+                    height={32}
+                    className="hover:opacity-80 transition-opacity"
+                  />
+                </Link>
+              </div>
             </div>
         </div>
 

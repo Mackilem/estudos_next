@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { Menu, X, Instagram, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Header({ pathname }: { pathname: string }) {
+interface HeaderProps {
+  pathname?: string;
+}
+
+export default function Header({ pathname }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
